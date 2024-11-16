@@ -26,7 +26,7 @@ build_image:
   script:
     # Build the Docker image from the Dockerfile in the current directory
     - docker build --pull -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG" .
-    # Pushe the built Docker image to the GitLab Container Registry
+    # Push the built Docker image to the GitLab Container Registry
     - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
   rules: 
     # Rule: Run this job only for main branch and if the Dockerfile exists
